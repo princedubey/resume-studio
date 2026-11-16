@@ -12,6 +12,7 @@ export function generateStaticParams() {
     { templateId: "ats-onepage" },
     { templateId: "ats-twopage" },
     { templateId: "jd-ai-security" },
+    { templateId: "jd-fullstack-aws" },
   ];
 }
 

@@ -42,6 +42,14 @@ export const TEMPLATE_CATALOG: TemplateMeta[] = [
     previewAccent: "#7f1d1d",
   },
   {
+    id: "jd-fullstack-aws",
+    name: "JD — Full-Stack AWS Microservices",
+    description:
+      "Senior SWE 2-pager for React/TS + FastAPI microservices on AWS (Vite, EventBridge, ECS, DynamoDB, Auth0, Claude pairing).",
+    status: "ready",
+    previewAccent: "#0b3d5c",
+  },
+  {
     id: "classic-serif",
     name: "Classic Serif",
     description: "Single-column editorial layout — coming soon.",
