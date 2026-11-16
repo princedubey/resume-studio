@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { downloadResumeDocx } from "@/lib/exportDocx";
 import {
   createResume,
   deleteResume,
@@ -378,6 +379,21 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
         <div className="row-btns">
           <button type="button" className="primary" onClick={() => apiRef.current?.print()}>
             Print / Save PDF
+          </button>
+          <button
+            type="button"
+            onClick={async () => {
+              const html = apiRef.current?.getState().html;
+              if (!html) return;
+              try {
+                await downloadResumeDocx(html, resumeName || "resume");
+              } catch (err) {
+                console.error(err);
+                alert("Could not build the Word file. Try again after a refresh.");
+              }
+            }}
+          >
+            Download DOC
           </button>
           <button
             type="button"
