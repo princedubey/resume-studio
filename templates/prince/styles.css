@@ -21,14 +21,14 @@
   }
 
   * { box-sizing: border-box; }
-  html, body {
+  .prince-editor {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
     color: var(--ink);
     background: #e8eaed;
   }
-  body { display: flex; min-height: 100vh; }
+.prince-editor { display: flex; min-height: 100vh; }
 
   .panel {
     width: 320px;
@@ -42,6 +42,9 @@
     top: 0;
   }
   .panel h1 { font-size: 15px; margin: 0 0 4px; }
+  .panel .back-link { margin: 0 0 10px; font-size: 12px; }
+  .panel .back-link a { color: var(--accent); text-decoration: none; }
+  .panel .back-link a:hover { text-decoration: underline; }
   .panel .sub { font-size: 12px; color: #555; margin-bottom: 14px; line-height: 1.35; }
   .panel h2 {
     font-size: 11px;
@@ -80,6 +83,25 @@
     padding: 7px 8px;
     font: inherit;
     font-size: 12.5px;
+  }
+  .resume-picker {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .resume-picker label {
+    font-size: 12px;
+    color: #555;
+  }
+  .resume-picker select,
+  .resume-picker input[type="text"] {
+    width: 100%;
+    border: 1px solid #b8c0c8;
+    border-radius: 6px;
+    padding: 7px 8px;
+    font: inherit;
+    font-size: 12.5px;
+    background: #fff;
   }
   .row-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .history-list {
@@ -245,9 +267,9 @@
     margin: 0;
     z-index: 2;
   }
-  body.edit-mode .job,
-  body.edit-mode .project { position: relative; padding-bottom: 0; }
-  body.edit-mode .section-actions { display: inline-flex; }
+  .prince-editor.edit-mode .job,
+  .prince-editor.edit-mode .project { position: relative; padding-bottom: 0; }
+  .prince-editor.edit-mode .section-actions { display: inline-flex; }
   .section-actions button { padding: 2px 6px; font-size: 10px; background: #fff; }
 
   .body-text { font-size: var(--font-body); line-height: 1.38; margin: 0; }
@@ -344,7 +366,7 @@
 
   @media print {
     @page { size: A4; margin: 0; }
-    html, body {
+    .prince-editor {
       background: #fff !important;
       display: block !important;
       width: 210mm;
@@ -352,10 +374,10 @@
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    .panel, .page-status, #master { display: none !important; }
-    .workspace { padding: 0 !important; display: block !important; overflow: visible !important; }
-    #sheets { gap: 0 !important; width: 210mm; }
-    .sheet {
+    .prince-editor .panel, .prince-editor .page-status, .prince-editor #master { display: none !important; }
+    .prince-editor .workspace { padding: 0 !important; display: block !important; overflow: visible !important; }
+    .prince-editor #sheets { gap: 0 !important; width: 210mm; }
+    .prince-editor .sheet {
       width: 210mm !important;
       height: 297mm !important;
       min-height: 297mm !important;
@@ -368,13 +390,14 @@
       break-after: page;
       page-break-inside: avoid;
     }
-    .sheet:last-child { page-break-after: auto; break-after: auto; }
-    .sheet-inner {
+    .prince-editor .sheet:last-child { page-break-after: auto; break-after: auto; }
+    .prince-editor .sheet-inner {
       padding: 12mm 12mm 8mm !important;
       height: 297mm !important;
       overflow: hidden !important;
     }
-    .sheet-label, .section-actions { display: none !important; }
+    .prince-editor .sheet-label,
+    .prince-editor .section-actions { display: none !important; }
     [contenteditable="true"]:hover,
     [contenteditable="true"]:focus { background: transparent !important; box-shadow: none !important; }
     a, a.company, a.project-name, a.edu-school, a.contact-link { color: inherit !important; text-decoration: underline !important; }

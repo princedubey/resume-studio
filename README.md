@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Studio
 
-## Getting Started
+Local-first multi-template resume editor built with Next.js. Edit on real A4 pages, print/PDF from the browser, and keep the last 10 draft versions in `localStorage`.
 
-First, run the development server:
+## Templates
+
+| ID | Name | Status |
+| --- | --- | --- |
+| `prince` | Prince — Two Column A4 | Ready |
+| `ats-onepage` | ATS One-Page Senior SWE | Ready |
+| `ats-twopage` | ATS Detailed 2-Page Senior SWE | Ready |
+| `jd-ai-security` | JD — AI Engineer Security | Ready |
+| `classic-serif` | Classic Serif | Coming soon |
+
+### Add another template
+
+1. Create `templates/<id>/` (Editor component + styles + default content).
+2. Export a module from `templates/<id>/index.ts`.
+3. Add metadata in `templates/registry.ts`.
+4. Register the editor in `templates/load.ts`.
+
+## Develop
 
 ```bash
+cd /Applications/WORKSPACE/resume-studio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) → **Prince** → **Open editor**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Deploy on Vercel by importing this folder (or connecting a GitHub repo). No environment variables required for v1.
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Drafts and history are per-browser: `resume-studio:<templateId>:draft` / `:history`.
+- The Prince editor migrates older standalone HTML keys (`prince-resume-editor-v3`, etc.) when present.
+- Use **Print / Save PDF** (browser print → Save as PDF).
+- **Enter** adds a bullet/skill row; **Backspace** on an empty one removes it.

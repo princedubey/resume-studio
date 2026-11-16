@@ -1,0 +1,492 @@
+:root {
+  --ink: #111;
+  --muted: #333;
+  --line: #222;
+  --panel: #f6f7f8;
+  --accent: #1e3a5f;
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --page-gap: 22px;
+  --gap-section: 11px;
+  --gap-item: 8px;
+  --gap-bullet: 3px;
+  --font-name: 24px;
+  --font-role: 13.5px;
+  --font-section: 12.5px;
+  --font-job: 12px;
+  --font-body: 10.5px;
+  --font-meta: 10px;
+}
+
+* { box-sizing: border-box; }
+
+.ats2-editor {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: #e8eaed;
+  display: flex;
+  min-height: 100vh;
+}
+
+.ats2-editor .panel {
+  width: 320px;
+  flex-shrink: 0;
+  background: var(--panel);
+  border-right: 1px solid #d0d5db;
+  padding: 16px 16px 40px;
+  overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.ats2-editor .panel h1 { font-size: 15px; margin: 0 0 4px; }
+.ats2-editor .panel .back-link { margin: 0 0 10px; font-size: 12px; }
+.ats2-editor .panel .back-link a { color: var(--accent); text-decoration: none; }
+.ats2-editor .panel .back-link a:hover { text-decoration: underline; }
+.ats2-editor .panel .sub { font-size: 12px; color: #555; margin-bottom: 14px; line-height: 1.35; }
+.ats2-editor .panel h2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 18px 0 8px;
+  color: #444;
+  border-bottom: 1px solid #d0d5db;
+  padding-bottom: 4px;
+}
+.ats2-editor .ctrl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+.ats2-editor .ctrl output { font-variant-numeric: tabular-nums; color: #555; min-width: 42px; text-align: right; }
+.ats2-editor .ctrl input[type="range"] { grid-column: 1 / -1; width: 100%; }
+.ats2-editor .link-box {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.ats2-editor .link-box .target {
+  font-size: 11.5px;
+  color: #555;
+  min-height: 16px;
+  word-break: break-word;
+}
+.ats2-editor .link-box input[type="url"],
+.ats2-editor .link-box input[type="text"] {
+  width: 100%;
+  border: 1px solid #b8c0c8;
+  border-radius: 6px;
+  padding: 7px 8px;
+  font: inherit;
+  font-size: 12.5px;
+}
+.ats2-editor .link-box input:disabled {
+  background: #f3f5f7;
+  color: #888;
+}
+.ats2-editor .resume-picker { display: grid; gap: 6px; margin-bottom: 4px; }
+.ats2-editor .resume-picker label { font-size: 12px; color: #555; }
+.ats2-editor .resume-picker select,
+.ats2-editor .resume-picker input[type="text"] {
+  width: 100%;
+  border: 1px solid #b8c0c8;
+  border-radius: 6px;
+  padding: 7px 8px;
+  font: inherit;
+  font-size: 12.5px;
+  background: #fff;
+}
+.ats2-editor .row-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ats2-editor .history-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 6px;
+  max-height: 220px;
+  overflow: auto;
+}
+.ats2-editor .history-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 8px;
+  border: 1px solid #d0d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11.5px;
+}
+.ats2-editor .history-item .meta { color: #555; line-height: 1.3; }
+.ats2-editor button {
+  appearance: none;
+  border: 1px solid #b8c0c8;
+  background: #fff;
+  color: #122;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.ats2-editor button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.ats2-editor button.danger { color: #a11; border-color: #e0b4b4; }
+.ats2-editor .hint { font-size: 11.5px; color: #666; line-height: 1.4; margin-top: 10px; }
+.ats2-editor .toggle { display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin: 8px 0; }
+
+.ats2-editor .workspace {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.ats2-editor .page-status {
+  position: sticky;
+  top: 8px;
+  z-index: 20;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+.ats2-editor .page-status.warn { background: #b45309; }
+
+.ats2-editor #sheets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--page-gap);
+  width: 100%;
+}
+
+.ats2-editor .sheet {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  border: 1px solid #cfd5dc;
+  position: relative;
+  overflow: hidden;
+}
+.ats2-editor .sheet-label {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 5;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(255,255,255,.95);
+  border: 1px solid #c5d0dc;
+  border-radius: 999px;
+  padding: 3px 9px;
+  pointer-events: none;
+}
+.ats2-editor .sheet-inner {
+  height: 100%;
+  padding: 12mm 14mm 10mm;
+  overflow: hidden;
+  position: relative;
+}
+
+.ats2-editor [contenteditable="true"] { outline: none; border-radius: 2px; }
+.ats2-editor [contenteditable="true"]:hover { background: rgba(15, 118, 110, 0.05); }
+.ats2-editor [contenteditable="true"]:focus {
+  background: rgba(15, 118, 110, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.28);
+}
+
+.ats2-editor .ats-header { text-align: center; margin-bottom: var(--gap-section); }
+.ats2-editor .name {
+  font-size: var(--font-name);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin: 0 0 2px;
+  text-transform: uppercase;
+}
+.ats2-editor .role {
+  font-size: var(--font-role);
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+.ats2-editor .contact-line {
+  font-size: var(--font-meta);
+  line-height: 1.35;
+  margin: 0;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.ats2-editor .contact-line a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ats2-editor .section { margin-bottom: var(--gap-section); }
+.ats2-editor .section-title {
+  font-size: var(--font-section);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 5px;
+  padding-bottom: 2px;
+  border-bottom: 1.2px solid var(--line);
+}
+
+.ats2-editor .body-text {
+  font-size: var(--font-body);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ats2-editor .skills,
+.ats2-editor .awards,
+.ats2-editor .job-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ats2-editor .skills li.skill-row {
+  font-size: var(--font-body);
+  line-height: 1.32;
+  margin-bottom: 2px;
+}
+.ats2-editor .skill-label { font-weight: 700; margin-right: 4px; }
+.ats2-editor .skill-value { font-weight: 400; }
+
+.ats2-editor .awards li,
+.ats2-editor .job-bullets li {
+  position: relative;
+  padding-left: 11px;
+  font-size: var(--font-body);
+  line-height: 1.32;
+  margin-bottom: var(--gap-bullet);
+}
+.ats2-editor .awards li::before,
+.ats2-editor .job-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ats2-editor .job { margin-bottom: var(--gap-item); }
+.ats2-editor .job-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+.ats2-editor .job-title {
+  font-size: var(--font-job);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.ats2-editor .job-dates {
+  font-size: var(--font-meta);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.ats2-editor .company-line {
+  font-size: var(--font-body);
+  margin: 1px 0 3px;
+  line-height: 1.25;
+}
+.ats2-editor a.company,
+.ats2-editor a.edu-school {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ats2-editor .meta { color: var(--muted); font-size: var(--font-meta); }
+.ats2-editor .edu-degree {
+  font-size: var(--font-job);
+  font-weight: 700;
+  margin: 0;
+}
+.ats2-editor .project { margin-bottom: calc(var(--gap-item) - 2px); }
+.ats2-editor a.project-name {
+  font-size: var(--font-job);
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin: 0;
+  line-height: 1.2;
+}
+.ats2-editor .project-line {
+  font-size: var(--font-body);
+  line-height: 1.3;
+  margin: 1px 0 0;
+  color: var(--ink);
+}
+.ats2-editor.edit-mode .project { position: relative; }
+
+
+.ats2-editor .summary-bullets,
+.ats2-editor .project-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ats2-editor .summary-bullets li,
+.ats2-editor .project-bullets li {
+  position: relative;
+  padding-left: 11px;
+  font-size: var(--font-body);
+  line-height: 1.35;
+  margin-bottom: var(--gap-bullet);
+}
+.ats2-editor .summary-bullets li::before,
+.ats2-editor .project-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ats2-editor .project-meta {
+  font-size: var(--font-meta);
+  color: var(--muted);
+  margin: 1px 0 3px;
+}
+.ats2-editor .tech-stack {
+  font-size: var(--font-body);
+  margin: 3px 0 0;
+}
+.ats2-editor .section-actions {
+  display: none;
+  gap: 4px;
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  margin: 0;
+  z-index: 2;
+}
+.ats2-editor.edit-mode .job { position: relative; }
+.ats2-editor.edit-mode .section-actions { display: inline-flex; }
+.ats2-editor .section-actions button { padding: 2px 6px; font-size: 10px; background: #fff; }
+
+.ats2-editor #master {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: var(--page-w);
+  visibility: hidden;
+  pointer-events: none;
+}
+.ats2-editor #master .sheet-inner {
+  height: auto;
+  overflow: visible;
+  padding: 12mm 14mm 10mm;
+}
+
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body {
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .ats2-editor {
+    background: #fff !important;
+    display: block !important;
+    width: 210mm;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .ats2-editor .panel,
+  .ats2-editor .page-status,
+  .ats2-editor #master { display: none !important; }
+  .ats2-editor .workspace {
+    padding: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .ats2-editor #sheets {
+    gap: 0 !important;
+    width: 210mm;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+  /* Fixed 297mm sheets often spill ~1px and create a blank page 2 */
+  .ats2-editor .sheet {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: hidden !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+  }
+  .ats2-editor .sheet:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  .ats2-editor .sheet-inner {
+    padding: 12mm 14mm 10mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    overflow: hidden !important;
+  }
+  .ats2-editor .sheet-label,
+  
+.ats2-editor .summary-bullets,
+.ats2-editor .project-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ats2-editor .summary-bullets li,
+.ats2-editor .project-bullets li {
+  position: relative;
+  padding-left: 11px;
+  font-size: var(--font-body);
+  line-height: 1.35;
+  margin-bottom: var(--gap-bullet);
+}
+.ats2-editor .summary-bullets li::before,
+.ats2-editor .project-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ats2-editor .project-meta {
+  font-size: var(--font-meta);
+  color: var(--muted);
+  margin: 1px 0 3px;
+}
+.ats2-editor .tech-stack {
+  font-size: var(--font-body);
+  margin: 3px 0 0;
+}
+.ats2-editor .section-actions { display: none !important; }
+  .ats2-editor [contenteditable="true"]:hover,
+  .ats2-editor [contenteditable="true"]:focus { background: transparent !important; box-shadow: none !important; }
+}
