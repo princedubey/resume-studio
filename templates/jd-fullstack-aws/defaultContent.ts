@@ -1,12 +1,12 @@
 /**
  * JD overlay: Full-Stack React (TS) + Python FastAPI microservices on AWS.
- * Page 1 (summary + skills) kept dense for the JD. Experience / projects
- * trimmed so the resume fits cleanly on 2 A4 pages.
+ * Page 1 matches the user’s saved edits (role, summary, skills).
+ * Experience / projects stay trimmed for a clean 2-page fit.
  */
 export const JD_FULLSTACK_AWS_CONTENT = `
 <header class="ats-header">
   <h1 class="name" contenteditable="true" data-key="name">PRINCE DUBEY</h1>
-  <p class="role" contenteditable="true" data-key="role">Senior Software Engineer | Forward Deployed Engineer | Full-Stack · AI · Cloud</p>
+  <p class="role" contenteditable="true" data-key="role">Senior Software Engineer</p>
   <p class="contact-line">
     <a class="contact-link" href="mailto:princedubey1998@gmail.com" contenteditable="true" data-key="email">princedubey1998@gmail.com</a>
     <span aria-hidden="true"> · </span>
@@ -23,26 +23,23 @@ export const JD_FULLSTACK_AWS_CONTENT = `
 <section class="section" data-section="summary" data-block="summary">
   <h2 class="section-title" contenteditable="true">Professional Summary</h2>
   <ul class="summary-bullets">
-    <li contenteditable="true">Forward Deployed Senior Software Engineer with 7+ years shipping production full-stack systems — React / TypeScript UIs and Python FastAPI (and Node.js / .NET) microservices — for Microsoft, Dow Jones / News Corp / Wall Street Journal, and Autodesk.</li>
-    <li contenteditable="true">Design independently deployable front-end modules and clear service boundaries: OpenAPI / REST contracts, versioning, authentication, owned data stores, and sync REST plus async event patterns; engineer for failure with retries, idempotency, timeouts, and graceful degradation.</li>
-    <li contenteditable="true">Hands-on AWS (Lambda, API Gateway, ECS / Fargate-style container delivery, S3, Secrets Manager, CloudWatch) plus DynamoDB and MySQL / Aurora-class relational modeling; CI/CD, containers, observability, and Claude / LLM tools as a daily pairing partner for scaffolding, tests, PR review, and incident write-ups.</li>
-    <li contenteditable="true">Deliver measurable outcomes: up to 40% lower API latency, 25% lower operating cost, ~15% infrastructure savings, and 99.9% uptime while mentoring, reviewing code, and documenting designs for the team.</li>
+    <li contenteditable="true">Senior Software Engineer with 7+ years of experience across product-based companies and enterprise client engagements, leading technical discovery, stakeholder collaboration, solution architecture, and end-to-end product development.</li>
+    <li contenteditable="true">Proven track record delivering scalable enterprise platforms and AI-powered solutions for Microsoft, Dow Jones, and Autodesk, bridging business and engineering teams to solve complex challenges and achieve measurable outcomes, including 40% lower API latency, 25% reduced operational costs, and 99.9% platform availability.</li>
   </ul>
 </section>
 
 <section class="section" data-section="skills" data-block="skills">
   <h2 class="section-title" contenteditable="true">Skills</h2>
   <ul class="skills" id="skillsList">
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Languages:</strong> <span class="skill-value" contenteditable="true">TypeScript, Python, JavaScript, Go (Golang), C#, Java, SQL</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Front End:</strong> <span class="skill-value" contenteditable="true">React.js, Next.js, Vite, Vue.js, React Native, Shared Design Systems, Accessibility (a11y), Performance, Micro-frontends / Module Federation patterns, Component &amp; E2E Testing, Per-tenant Feature Flags</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Languages:</strong> <span class="skill-value" contenteditable="true">TypeScript, Python, JavaScript, Golang, C#, Java, SQL</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Front End:</strong> <span class="skill-value" contenteditable="true">React.js, Next.js, Vite, Vue.js, Shared Design Systems, Accessibility (a11y), Performance, Micro-frontends, Module Federation patterns, Component &amp; E2E Testing, Per-tenant Feature Flags</span></li>
     <li class="skill-row"><strong class="skill-label" contenteditable="true">Back End &amp; APIs:</strong> <span class="skill-value" contenteditable="true">Python FastAPI, Node.js, Express.js, .NET Core, Spring Boot, Golang Gin, REST, OpenAPI Contracts, API Versioning, Auth0 / OAuth / JWT, GraphQL, Microservices, Service Boundaries, Data Ownership</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Microservices &amp; Messaging:</strong> <span class="skill-value" contenteditable="true">Service Decomposition, Synchronous REST, Asynchronous Events, EventBridge, Event-driven Design, Retries, Idempotency, Timeouts, Circuit Breakers, Graceful Degradation, Eventual Consistency</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">AWS &amp; Cloud:</strong> <span class="skill-value" contenteditable="true">Lambda, ECS Fargate, API Gateway, EventBridge, Step Functions, S3, SES, Secrets Manager, CloudWatch, IAM, EC2, Docker, Azure</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Data:</strong> <span class="skill-value" contenteditable="true">MySQL / Aurora, DynamoDB (single-table patterns), PostgreSQL, MongoDB, SQL Server, Schema Design, Query Optimization, Multi-tenant Data Isolation</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Infrastructure &amp; Quality:</strong> <span class="skill-value" contenteditable="true">AWS CDK, CloudFormation, CircleCI, GitHub Actions, Azure DevOps, SonarCloud, Automated Tests, CI/CD, Containers, Code Review, Design Docs</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Observability &amp; Ops:</strong> <span class="skill-value" contenteditable="true">OpenTelemetry, Logs / Metrics / Traces, CloudWatch, Alerting, SLOs, Runbooks, Incident Follow-up</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">AI / LLM (daily workflow):</strong> <span class="skill-value" contenteditable="true">Claude, OpenAI, Azure OpenAI, LangChain, LangGraph, RAG, Agentic AI, Prompt Engineering — used for scaffolding, API contracts, tests, PR hardening, log/incident summarization, and React prototyping</span></li>
-    <li class="skill-row"><strong class="skill-label" contenteditable="true">Core Competencies:</strong> <span class="skill-value" contenteditable="true">Multi-tenancy, Feature-flag Rollouts, Technical Leadership, Mentoring, Production Ownership, Stakeholder Alignment, Marketplace / E-commerce Domains</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Cloud:</strong> <span class="skill-value" contenteditable="true">Lambda, ECS Fargate, API Gateway, EventBridge, Step Functions, S3, SES, Secrets Manager, CloudWatch, IAM, EC2, Docker, Azure</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Database:</strong> <span class="skill-value" contenteditable="true">MySQL, DynamoDB, PostgreSQL, MongoDB, SQL Server, Schema Design, Query Optimization, Multi-tenant Data Isolation</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Infrastructure &amp; Quality:</strong> <span class="skill-value" contenteditable="true">AWS CDK, CloudFormation, CircleCI, GitHub Actions, Azure DevOps, SonarCloud, CI/CD, Containers</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Observability &amp; Ops:</strong> <span class="skill-value" contenteditable="true">OpenTelemetry, CloudWatch, Alerting, SLOs, Runbooks, Incident Follow-up</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">AI / LLM:</strong> <span class="skill-value" contenteditable="true">OpenAI, Azure OpenAI, Azure AI Foundry, LangChain, LangGraph, RAG pipelines, Agentic AI, Generative AI, Prompt Engineering, Vector Search, Pinecone, Hugging Face, MCP, Claude</span></li>
+    <li class="skill-row"><strong class="skill-label" contenteditable="true">Core Competencies:</strong> <span class="skill-value" contenteditable="true">Multi-tenancy, Feature-flag Rollouts, Technical Leadership, Mentoring, Production Ownership, Stakeholder Alignment</span></li>
   </ul>
 </section>
 
