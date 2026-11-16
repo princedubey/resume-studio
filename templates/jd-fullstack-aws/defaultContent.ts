@@ -1,8 +1,7 @@
 /**
  * JD overlay: Full-Stack React (TS) + Python FastAPI microservices on AWS.
- * Keeps Senior SWE titles, companies, and core stack. Layers missing JD tech
- * (Vite, Auth0, EventBridge, ECS Fargate, DynamoDB/Aurora, CDK, CircleCI,
- * OpenTelemetry, multi-tenancy, Claude-as-pairing) into skills, bullets, projects.
+ * Page 1 (summary + skills) kept dense for the JD. Experience / projects
+ * trimmed so the resume fits cleanly on 2 A4 pages.
  */
 export const JD_FULLSTACK_AWS_CONTENT = `
 <header class="ats-header">
@@ -57,13 +56,10 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="company-line"><a class="company" href="https://www.microsoft.com" target="_blank" rel="noopener" contenteditable="true">WaferWire Cloud Technologies (Microsoft)</a> <span class="meta" contenteditable="true">| Redmond, WA, United States · Remote / India</span></p>
       <ul class="job-bullets">
-        <li contenteditable="true">Own architecture and delivery for Microsoft MDX / Dream Demos platforms: ship React / TypeScript (Next.js) and Vue modules as independently deployable demo units with shared UI patterns, accessibility, and performance budgets.</li>
-        <li contenteditable="true">Design and run Python FastAPI (plus Node.js / .NET) microservices with clear OpenAPI contracts, versioning, authentication, and well-defined data ownership across MongoDB / PostgreSQL stores.</li>
-        <li contenteditable="true">Draw service boundaries for RAG / agent backends — sync REST for request paths and async / event-style handoffs where services must stay loosely coupled; apply retries, idempotency, timeouts, and graceful degradation on LLM and API layers.</li>
-        <li contenteditable="true">Build end-to-end RAG and agent pipelines with LangChain / LangGraph and Azure AI Foundry; use Claude and other LLMs daily to scaffold services, draft contracts/tests, harden PRs, and summarize operational issues.</li>
-        <li contenteditable="true">Run what we ship: Azure DevOps CI/CD, Docker packaging, observability and cost/latency dashboards; mentor engineers, review code, and write short design notes for reusable accelerators.</li>
-        <li contenteditable="true">Improve production KPIs — ~40% lower API latency and ~25% lower operating cost — while sustaining high reliability for partner and customer demo environments.</li>
-        <li contenteditable="true">Promoted for technical ownership; recognized as Lead Senior Software Engineer / Forward Deployed Engineer on Microsoft client engagement.</li>
+        <li contenteditable="true">Own Microsoft MDX / Dream Demos delivery: React / TypeScript (Next.js) and Vue modules as independently deployable units with shared UI patterns, accessibility, and performance budgets.</li>
+        <li contenteditable="true">Design Python FastAPI (plus Node.js / .NET) microservices with OpenAPI contracts, versioning, auth, and clear data ownership; sync REST plus async event-style boundaries with retries, idempotency, timeouts, and graceful degradation.</li>
+        <li contenteditable="true">Ship RAG / agent pipelines (LangChain / LangGraph, Azure AI Foundry); use Claude daily for scaffolding, contracts/tests, and PR hardening; Azure DevOps CI/CD, Docker, and observability.</li>
+        <li contenteditable="true">Cut API latency ~40% and cost ~25%; promoted to Lead Senior Software Engineer / Forward Deployed Engineer on the Microsoft engagement.</li>
       </ul>
       <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
     </article>
@@ -75,11 +71,9 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="company-line"><a class="company" href="https://www.techmahindra.com" target="_blank" rel="noopener" contenteditable="true">Tech Mahindra (Dow Jones / News Corp / Wall Street Journal)</a> <span class="meta" contenteditable="true">| Hyderabad, India · Remote</span></p>
       <ul class="job-bullets">
-        <li contenteditable="true">Led React.js / Next.js / Vue.js TypeScript front ends for high-traffic Dow Jones financial and news workflows — admin and user-facing modules with shared components and performance focus.</li>
-        <li contenteditable="true">Designed scalable REST / GraphQL microservices in Python (FastAPI), .NET Core, Node.js, Golang, and TypeScript with API versioning, auth, and clear ownership of MongoDB / PostgreSQL / SQL data; improved backend performance ~25%.</li>
-        <li contenteditable="true">Engineered AI-powered search and conversational features with FastAPI, OpenAI / Azure OpenAI, LangChain, and vector databases — treating LLM tools as part of the delivery loop for contracts, tests, and debugging across services.</li>
-        <li contenteditable="true">Sustained 99.9% uptime with caching, query tuning, and failure-aware API design (timeouts, validation, least-privilege access) for licensed content and GenAI retrieval paths.</li>
-        <li contenteditable="true">Partnered with Agile release trains on demos, acceptance reviews, code review, and documentation that shortened feedback loops across distributed teams.</li>
+        <li contenteditable="true">Led React / Next.js / Vue TypeScript front ends for high-traffic Dow Jones financial and news workflows with shared components and performance focus.</li>
+        <li contenteditable="true">Built versioned REST / GraphQL microservices (Python FastAPI, .NET, Node.js, Golang) with owned MongoDB / PostgreSQL data; ~25% better backend performance and 99.9% uptime.</li>
+        <li contenteditable="true">Delivered AI search / conversational features with FastAPI, OpenAI / Azure OpenAI, and LangChain; partnered on Agile release reviews, code review, and docs.</li>
       </ul>
       <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
     </article>
@@ -91,11 +85,9 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="company-line"><a class="company" href="https://www.eruvaka.com" target="_blank" rel="noopener" contenteditable="true">Eruvaka Technologies Pvt. Ltd. (Autodesk)</a> <span class="meta" contenteditable="true">| Hyderabad, India · Hybrid</span></p>
       <ul class="job-bullets">
-        <li contenteditable="true">Designed and maintained Python FastAPI and multi-language APIs (.NET Core, Node.js / Express, Golang, Java / Spring Boot) for Autodesk SaaS workloads with authentication, rate limiting, and stable REST contracts.</li>
-        <li contenteditable="true">Deployed on AWS — Lambda, API Gateway, EC2, S3, IAM, Secrets Manager — with Docker packaging; reduced infrastructure cost ~15% while improving scalable delivery (ECS / Fargate-ready container patterns).</li>
-        <li contenteditable="true">Built AI-powered Function Apps with FastAPI, OpenAI, and LangChain for automated processing; modeled data across MySQL, PostgreSQL, and MongoDB with secure multi-client access patterns.</li>
-        <li contenteditable="true">Practiced service decomposition and failure handling on cloud APIs (retries, idempotent writes where needed, timeouts); CI/CD and automated checks as everyday habits.</li>
-        <li contenteditable="true">Documented API contracts and operational notes; collaborated with platform teams so front-end and service ownership stayed clear.</li>
+        <li contenteditable="true">Built FastAPI and multi-language APIs (.NET, Node.js, Golang, Spring Boot) for Autodesk SaaS with auth, rate limiting, and stable REST / OpenAPI contracts.</li>
+        <li contenteditable="true">Deployed on AWS (Lambda, API Gateway, EC2, S3, IAM, Secrets Manager) with Docker / ECS-Fargate-ready packaging; ~15% lower infra cost.</li>
+        <li contenteditable="true">Shipped OpenAI / LangChain Function Apps; modeled MySQL / PostgreSQL / MongoDB with multi-client access, retries/timeouts, and CI/CD as everyday habits.</li>
       </ul>
       <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
     </article>
@@ -107,10 +99,8 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="company-line"><a class="company" href="https://www.google.com/search?q=King+of+Digital+Marketing+Pvt+Ltd" target="_blank" rel="noopener" contenteditable="true">King of Digital Marketing Pvt. Ltd.</a> <span class="meta" contenteditable="true">| New Delhi, India · Hybrid</span></p>
       <ul class="job-bullets">
-        <li contenteditable="true">Built production React / Next.js (TypeScript) and React Native UIs plus Node.js / .NET / Java / Golang backends; improved application performance ~30%.</li>
-        <li contenteditable="true">Integrated 250+ third-party APIs; configured MySQL, MongoDB, and PostgreSQL for multi-client (multi-tenant-style) delivery with per-client configuration.</li>
-        <li contenteditable="true">Deployed on AWS (EC2, S3, Lambda) with high-availability practices achieving ~99.9% uptime; reusable front-end/back-end patterns across marketplace and e-commerce workstreams.</li>
-        <li contenteditable="true">Raised team quality through shared components, code review, and documenting patterns before inventing new ones.</li>
+        <li contenteditable="true">Shipped React / Next.js (TypeScript) and React Native UIs with Node.js / .NET backends; ~30% better app performance; 250+ third-party API integrations.</li>
+        <li contenteditable="true">Configured MySQL / MongoDB / PostgreSQL for multi-client delivery; AWS (EC2, S3, Lambda) at ~99.9% uptime across marketplace and e-commerce workstreams.</li>
       </ul>
       <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
     </article>
@@ -122,8 +112,7 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="company-line"><a class="company" href="https://www.google.com/search?q=DevWebOIC+Tech+Solution" target="_blank" rel="noopener" contenteditable="true">DevWebOIC Tech Solution</a> <span class="meta" contenteditable="true">| New Delhi, India · Onsite</span></p>
       <ul class="job-bullets">
-        <li contenteditable="true">Built and debugged full-stack features using React.js, Python, Java, Node.js, and SQL with senior engineers.</li>
-        <li contenteditable="true">Supported production issue resolution and feature delivery across web application workstreams.</li>
+        <li contenteditable="true">Built and debugged full-stack features with React.js, Python, Java, Node.js, and SQL; supported production fixes with senior engineers.</li>
       </ul>
       <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
     </article>
@@ -138,15 +127,13 @@ export const JD_FULLSTACK_AWS_CONTENT = `
         <a class="project-name" href="https://partner.microsoft.com/en-us/asset/collection/industry-dream-demos-and-dream-demo-in-a-box" target="_blank" rel="noopener" contenteditable="true">Microsoft Dream Demos / MDX | React Modules &amp; FastAPI AI Services</a>
         <span class="job-dates" contenteditable="true">Jun 2025 – Present</span>
       </div>
-      <p class="project-meta" contenteditable="true">Role: Senior Software Engineer / Forward Deployed Engineer · Client: Microsoft Partner / Industry Solutions</p>
+      <p class="project-meta" contenteditable="true">Role: Senior Software Engineer / Forward Deployed Engineer · Client: Microsoft</p>
       <ul class="project-bullets">
-        <li contenteditable="true">Shipped independently deployable React / TypeScript (Next.js) and Vue demo modules with shared design-system components, accessibility, and performance budgets for industry Data &amp; AI walkthroughs.</li>
-        <li contenteditable="true">Owned Python FastAPI and Node.js / .NET microservices with OpenAPI-style contracts, auth, versioning, and clear data ownership for RAG / agent backends on Azure OpenAI / AI Foundry + LangChain / LangGraph.</li>
-        <li contenteditable="true">Defined service boundaries between UI, orchestration, and retrieval services; applied retries, idempotent job patterns, timeouts, and graceful degradation when LLM or downstream APIs failed.</li>
-        <li contenteditable="true">Used Claude daily to draft scaffolding, API contracts, unit/contract tests, and PR self-reviews; wired CI/CD, Docker, logs/metrics, and runbook-style notes for reusable accelerators.</li>
-        <li contenteditable="true">Cut API latency ~40% and operating cost ~25% via caching, context optimization, and observability-driven tuning across demo and customer environments.</li>
+        <li contenteditable="true">Shipped independently deployable React / TypeScript (Next.js) demo modules with shared design-system components, a11y, and performance budgets.</li>
+        <li contenteditable="true">Owned FastAPI / Node / .NET microservices with OpenAPI contracts and RAG / agent backends (LangChain, Azure OpenAI); failure-aware boundaries and Claude-assisted tests / PR review.</li>
+        <li contenteditable="true">CI/CD + observability; ~40% lower API latency and ~25% lower operating cost across demo and customer environments.</li>
       </ul>
-      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">TypeScript, React, Next.js, Vite patterns, Python, FastAPI, Node.js, .NET, OpenAPI / REST, LangChain, Azure OpenAI, Docker, Azure DevOps CI/CD, Claude, Observability</span></p>
+      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">TypeScript, React, Next.js, Vite, Python, FastAPI, Node.js, .NET, OpenAPI, LangChain, Azure OpenAI, Docker, Azure DevOps, Claude</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
     </article>
 
@@ -157,13 +144,11 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="project-meta" contenteditable="true">Role: Senior Software Engineer · Client: Dow Jones / News Corp / Wall Street Journal</p>
       <ul class="project-bullets">
-        <li contenteditable="true">Delivered React / Next.js / Vue TypeScript front ends for financial intelligence workflows — high-read UX with shared components and careful performance on large result sets.</li>
-        <li contenteditable="true">Built Python FastAPI and polyglot microservices (Node.js, .NET, Golang) exposing versioned REST / GraphQL APIs with auth, validation, and owned MongoDB / PostgreSQL / SQL data models.</li>
-        <li contenteditable="true">Integrated GenAI search / summarization over licensed news with LangChain and vector retrieval; designed failure modes so retrieval timeouts and bad model outputs degrade gracefully.</li>
-        <li contenteditable="true">Sustained 99.9% uptime and ~25% backend gains through query/caching work, automated tests in the delivery pipeline, and code review / design notes across Agile trains.</li>
-        <li contenteditable="true">Used LLM tooling to explore cross-service request paths, draft contract tests, and tighten error handling before human review.</li>
+        <li contenteditable="true">Delivered React / Next.js / Vue TypeScript front ends and FastAPI / polyglot microservices with versioned REST / GraphQL and owned SQL / MongoDB models.</li>
+        <li contenteditable="true">Integrated GenAI search / summarization with LangChain; graceful degradation on timeouts; 99.9% uptime and ~25% backend gains.</li>
+        <li contenteditable="true">Used LLM tooling for cross-service debugging, contract tests, and error-handling review before merge.</li>
       </ul>
-      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">TypeScript, React, Next.js, Vue, Python, FastAPI, Node.js, .NET, Golang, REST, GraphQL, OpenAPI, PostgreSQL, MongoDB, LangChain, Docker, CI/CD, Claude / OpenAI</span></p>
+      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">TypeScript, React, Next.js, Vue, Python, FastAPI, Node.js, .NET, Golang, REST, GraphQL, OpenAPI, PostgreSQL, MongoDB, LangChain, Docker, CI/CD</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
     </article>
 
@@ -174,13 +159,11 @@ export const JD_FULLSTACK_AWS_CONTENT = `
       </div>
       <p class="project-meta" contenteditable="true">Role: Backend Engineer · Client: Autodesk (via Eruvaka Technologies)</p>
       <ul class="project-bullets">
-        <li contenteditable="true">Shipped FastAPI GenAI and workflow services with authentication, rate limiting, OpenAPI-friendly REST contracts, and owned MySQL / PostgreSQL / MongoDB data — plus .NET / Node / Golang companions where needed.</li>
-        <li contenteditable="true">Ran workloads on AWS Lambda, API Gateway, EC2, and S3 with IAM and Secrets Manager; containerized for ECS / Fargate-style promotion; cut infra cost ~15%.</li>
-        <li contenteditable="true">Modeled multi-client configuration and secure data access; applied retries/timeouts on third-party and LLM calls so one bad dependency did not take down the path.</li>
-        <li contenteditable="true">Automated tests and CI/CD for services; CloudWatch-oriented logging for operations; short design docs and API notes for front-end and platform partners.</li>
-        <li contenteditable="true">Prototyped and refined integrations with OpenAI / LangChain while reviewing PRs for error handling and isolation gaps before merge.</li>
+        <li contenteditable="true">Shipped FastAPI GenAI / workflow services with auth, rate limiting, and OpenAPI REST; MySQL / PostgreSQL / MongoDB data ownership.</li>
+        <li contenteditable="true">Ran on AWS Lambda, API Gateway, EC2, S3 with IAM / Secrets Manager; ECS/Fargate-ready containers; ~15% infra savings.</li>
+        <li contenteditable="true">Multi-client config, retries/timeouts, CI/CD, CloudWatch logging, and short design docs for platform partners.</li>
       </ul>
-      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">Python, FastAPI, AWS Lambda, API Gateway, ECS/Fargate patterns, S3, IAM, Secrets Manager, CloudWatch, Docker, MySQL, PostgreSQL, MongoDB, OpenAPI, REST, CI/CD, OpenAI, LangChain</span></p>
+      <p class="tech-stack"><strong>Tech:</strong> <span contenteditable="true">Python, FastAPI, AWS Lambda, API Gateway, ECS/Fargate, S3, IAM, Secrets Manager, CloudWatch, Docker, MySQL, PostgreSQL, MongoDB, OpenAPI, CI/CD, LangChain</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
     </article>
   </div>
