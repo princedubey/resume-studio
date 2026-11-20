@@ -94,10 +94,10 @@ export const JD_GENAI_FDE_CONTENT = `
           <a class="company" href="https://www.microsoft.com" target="_blank" rel="noopener" contenteditable="true">WaferWire Cloud Technologies (Microsoft)</a>
           <p class="meta" contenteditable="true">06/2025 – Present | Redmond / India · Remote</p>
           <ul class="job-bullets">
-            <li contenteditable="true">Embed with customer and partner teams on Microsoft MDX / Dream Demos — scope GenAI use cases and ship production-ready demos and accelerators end to end.</li>
-            <li contenteditable="true">Design agentic workflows (tool use, planning, memory, guardrails) and RAG pipelines (ingestion, chunking, embeddings, vector search, reranking, evals) with LangGraph / LangChain, Claude, Azure OpenAI / AI Foundry.</li>
-            <li contenteditable="true">Deliver React/Next.js frontends and Python FastAPI / Node / TypeScript backends with REST/GraphQL; harden with observability, cost/latency tuning, Docker, and Azure DevOps CI/CD.</li>
-            <li contenteditable="true">Feed field learnings into reusable accelerators; ~40% lower API latency, ~25% lower cost; promoted for FDE ownership.</li>
+            <li contenteditable="true">Lead technical discovery with Microsoft client stakeholders — gather requirements, whiteboard architecture options with CTOs / product owners, and translate field needs into shippable GenAI scopes for MDX / Dream Demos.</li>
+            <li contenteditable="true">Own end-to-end architecture for agentic and RAG systems (tool use, planning, memory, guardrails, evals); align API contracts and service boundaries across frontend, backend, platform, and DevOps partners.</li>
+            <li contenteditable="true">Coordinate multi-team delivery (design, engineering, partner SE, cloud ops): mentor engineers, run design reviews, and unblock integrations so prototypes harden into production accelerators.</li>
+            <li contenteditable="true">Ship React/Next.js + Python FastAPI / Node / TypeScript stacks with REST/GraphQL; CI/CD, Docker, observability, and cost/latency tuning — ~40% lower API latency, ~25% lower cost; promoted for FDE leadership.</li>
           </ul>
           <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
         </article>
@@ -106,9 +106,9 @@ export const JD_GENAI_FDE_CONTENT = `
           <a class="company" href="https://www.techmahindra.com" target="_blank" rel="noopener" contenteditable="true">Tech Mahindra (Dow Jones / News Corp)</a>
           <p class="meta" contenteditable="true">08/2024 – 06/2025 | Hyderabad · Remote</p>
           <ul class="job-bullets">
-            <li contenteditable="true">Shipped React/Next.js/Vue TypeScript apps and FastAPI / Node / .NET microservices for Dow Jones financial intelligence workflows.</li>
-            <li contenteditable="true">Built LLM-powered search and conversational retrieval (OpenAI / Azure OpenAI, LangChain, vector DBs) with eval-minded iteration and 99.9% uptime.</li>
-            <li contenteditable="true">Whiteboarded with stakeholders and debugged with developers same-day; improved backend performance ~25%.</li>
+            <li contenteditable="true">Partnered with Dow Jones product, editorial, and platform stakeholders to clarify requirements for financial intelligence search and GenAI retrieval — bridging business goals with engineering constraints.</li>
+            <li contenteditable="true">Architected and delivered React/Next.js/Vue front ends and FastAPI / Node / .NET microservices; drove cross-team API design, GraphQL/REST contracts, and data ownership with backend and data teams.</li>
+            <li contenteditable="true">Led LLM search / conversational features with OpenAI / Azure OpenAI and LangChain; facilitated Agile release reviews across distributed squads; ~25% backend gains and 99.9% uptime.</li>
           </ul>
           <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
         </article>
@@ -117,8 +117,8 @@ export const JD_GENAI_FDE_CONTENT = `
           <a class="company" href="https://www.eruvaka.com" target="_blank" rel="noopener" contenteditable="true">Eruvaka Technologies (Autodesk)</a>
           <p class="meta" contenteditable="true">01/2023 – 08/2024 | Hyderabad · Hybrid</p>
           <ul class="job-bullets">
-            <li contenteditable="true">Productionized FastAPI GenAI / workflow services on AWS (Lambda, API Gateway, EC2, S3, IAM, Secrets Manager) with Docker and CI/CD.</li>
-            <li contenteditable="true">Integrated OpenAI + LangChain for automation; modeled MySQL/PostgreSQL/MongoDB with secure multi-client access; ~15% infra savings.</li>
+            <li contenteditable="true">Worked with Autodesk product and platform teams to turn workflow-automation requirements into FastAPI GenAI services — auth, rate limits, and clear REST contracts for frontend consumers.</li>
+            <li contenteditable="true">Architected AWS delivery (Lambda, API Gateway, S3, IAM, Secrets Manager) with Docker / CI/CD; collaborated with infra and app teams on failure handling and multi-client data access; ~15% infra savings.</li>
           </ul>
           <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
         </article>
@@ -127,7 +127,7 @@ export const JD_GENAI_FDE_CONTENT = `
           <a class="company" href="https://www.google.com/search?q=King+of+Digital+Marketing+Pvt+Ltd" target="_blank" rel="noopener" contenteditable="true">King of Digital Marketing Pvt. Ltd.</a>
           <p class="meta" contenteditable="true">09/2020 – 01/2023 | New Delhi · Hybrid</p>
           <ul class="job-bullets">
-            <li contenteditable="true">Built React/Next.js and Node/.NET apps; 250+ API integrations; AWS EC2/S3/Lambda at ~99.9% uptime across marketplace/e-commerce clients.</li>
+            <li contenteditable="true">Led client requirement workshops for marketplace / e-commerce builds; coordinated designers, backend, and QA to ship React/Next.js + Node/.NET solutions with 250+ third-party integrations on AWS.</li>
           </ul>
           <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
         </article>
@@ -136,7 +136,7 @@ export const JD_GENAI_FDE_CONTENT = `
           <a class="company" href="https://www.google.com/search?q=DevWebOIC+Tech+Solution" target="_blank" rel="noopener" contenteditable="true">DevWebOIC Tech Solution</a>
           <p class="meta" contenteditable="true">11/2019 – 07/2020 | New Delhi · Onsite</p>
           <ul class="job-bullets">
-            <li contenteditable="true">Full-stack features with React, Python, Java, Node.js, and SQL alongside senior engineers.</li>
+            <li contenteditable="true">Supported senior engineers on requirement clarification and full-stack delivery (React, Python, Java, Node.js, SQL) across client web workstreams.</li>
           </ul>
           <div class="section-actions"><button type="button" data-act="add-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-job">Remove</button></div>
         </article>
@@ -157,12 +157,11 @@ export const JD_GENAI_FDE_CONTENT = `
         <a class="project-name" href="https://partner.microsoft.com/en-us/asset/collection/industry-dream-demos-and-dream-demo-in-a-box" target="_blank" rel="noopener" contenteditable="true">Microsoft Dream Demos / MDX | GenAI Agents &amp; RAG Accelerators</a>
         <span class="project-dates" contenteditable="true">06/2025 – Present</span>
       </div>
-      <p class="project-summary" contenteditable="true">Customer-facing GenAI demos and reusable accelerators — agentic workflows, RAG, and full-stack apps from discovery to production packaging.</p>
-      <p class="project-cr"><strong>Client:</strong> <span contenteditable="true">Microsoft</span> &nbsp;|&nbsp; <strong>Role:</strong> <span contenteditable="true">Senior Software Engineer / FDE</span></p>
+      <p class="project-cr"><strong>Client:</strong> <span contenteditable="true">Microsoft</span> &nbsp;|&nbsp; <strong>Role:</strong> <span contenteditable="true">Senior Software Engineer / FDE · Lead</span></p>
       <ul class="project-bullets">
-        <li contenteditable="true">Built multi-step agent flows with tool calling, guardrails, and human-in-the-loop; RAG evals for retrieval quality.</li>
-        <li contenteditable="true">React/Next.js + FastAPI/Node services; Claude used daily for scaffolding, contracts, tests, and PR hardening.</li>
-        <li contenteditable="true">CI/CD, Docker, observability; ~40% latency and ~25% cost improvements fed back into shared accelerators.</li>
+        <li contenteditable="true"><strong>Motive:</strong> Microsoft partners needed repeatable, production-grade GenAI demos (agents + RAG) that could be scoped with customers in days and reused across industry engagements — not one-off prototypes.</li>
+        <li contenteditable="true"><strong>Action:</strong> Led discovery with client stakeholders; owned architecture for multi-step agents (tool use, memory, guardrails) and RAG (ingest → embed → retrieve → rerank → eval). Coordinated UI, backend, and DevOps teams on React/Next.js + FastAPI/Node contracts; mentored engineers; used Claude for scaffolding, tests, and PR hardening.</li>
+        <li contenteditable="true"><strong>Result:</strong> Shipped reusable accelerators adopted across MDX / Dream Demo workstreams; ~40% lower API latency and ~25% lower operating cost; field patterns fed back into shared platforms; recognized with Lead FDE ownership.</li>
       </ul>
       <p class="tech-stack"><strong>Tech Stack:</strong> <span contenteditable="true">Python, FastAPI, TypeScript, React, Next.js, LangGraph, LangChain, Claude, Azure OpenAI, RAG, Docker, CI/CD, MCP</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
@@ -172,11 +171,11 @@ export const JD_GENAI_FDE_CONTENT = `
         <a class="project-name" href="https://www.dowjones.com/professional/factiva/" target="_blank" rel="noopener" contenteditable="true">Dow Jones | GenAI Search &amp; Enterprise Retrieval</a>
         <span class="project-dates" contenteditable="true">12/2024 – 06/2025</span>
       </div>
-      <p class="project-summary" contenteditable="true">Full-stack financial intelligence search with LLM summarization and microservice APIs for licensed news workflows.</p>
-      <p class="project-cr"><strong>Client:</strong> <span contenteditable="true">Dow Jones</span> &nbsp;|&nbsp; <strong>Role:</strong> <span contenteditable="true">Senior Software Engineer</span></p>
+      <p class="project-cr"><strong>Client:</strong> <span contenteditable="true">Dow Jones / News Corp</span> &nbsp;|&nbsp; <strong>Role:</strong> <span contenteditable="true">Senior Software Engineer</span></p>
       <ul class="project-bullets">
-        <li contenteditable="true">End-to-end RAG-style retrieval and conversational features with FastAPI, LangChain, and vector search.</li>
-        <li contenteditable="true">Versioned REST/GraphQL services; 99.9% uptime and ~25% backend gains under high-read traffic.</li>
+        <li contenteditable="true"><strong>Motive:</strong> Dow Jones needed faster, trustworthy research over licensed financial/news content — stakeholders required searchable GenAI summarization without sacrificing accuracy or uptime on high-read traffic.</li>
+        <li contenteditable="true"><strong>Action:</strong> Gathered requirements with product and editorial partners; designed microservice boundaries and REST/GraphQL APIs; built React/Next.js experiences and FastAPI + LangChain retrieval with vector search; aligned data and platform teams on ownership and release gates.</li>
+        <li contenteditable="true"><strong>Result:</strong> Delivered conversational / AI search paths with 99.9% uptime and ~25% backend performance improvement; shortened stakeholder feedback loops through demos and cross-squad reviews.</li>
       </ul>
       <p class="tech-stack"><strong>Tech Stack:</strong> <span contenteditable="true">React, Next.js, Python, FastAPI, LangChain, OpenAI, PostgreSQL, MongoDB, GraphQL, Docker</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
@@ -186,11 +185,11 @@ export const JD_GENAI_FDE_CONTENT = `
         <a class="project-name" href="https://www.autodesk.com" target="_blank" rel="noopener" contenteditable="true">Autodesk | AWS GenAI Workflow Services</a>
         <span class="project-dates" contenteditable="true">08/2023 – 08/2024</span>
       </div>
-      <p class="project-summary" contenteditable="true">Secure FastAPI GenAI services on AWS for content generation, search, and workflow automation in SaaS.</p>
       <p class="project-cr"><strong>Client:</strong> <span contenteditable="true">Autodesk</span> &nbsp;|&nbsp; <strong>Role:</strong> <span contenteditable="true">Backend Engineer</span></p>
       <ul class="project-bullets">
-        <li contenteditable="true">Lambda, API Gateway, S3, IAM, Secrets Manager; ECS/Fargate-ready containers; OpenAI + LangChain integrations.</li>
-        <li contenteditable="true">Auth, rate limiting, retries/timeouts; ~15% infrastructure cost reduction.</li>
+        <li contenteditable="true"><strong>Motive:</strong> Autodesk SaaS teams needed secure GenAI-backed workflow and content services that frontend apps could consume reliably under multi-client constraints.</li>
+        <li contenteditable="true"><strong>Action:</strong> Translated product requirements into FastAPI service architecture on AWS (Lambda, API Gateway, S3, IAM, Secrets Manager); partnered with platform and UI teams on auth, rate limiting, retries/timeouts, and OpenAPI contracts; integrated OpenAI / LangChain.</li>
+        <li contenteditable="true"><strong>Result:</strong> Production GenAI workflow APIs with Docker/CI/CD packaging; ~15% infrastructure cost reduction and clearer service ownership for consuming teams.</li>
       </ul>
       <p class="tech-stack"><strong>Tech Stack:</strong> <span contenteditable="true">Python, FastAPI, AWS Lambda, API Gateway, S3, IAM, Docker, MySQL, PostgreSQL, LangChain</span></p>
       <div class="section-actions"><button type="button" data-act="add-project-bullet">+ Bullet</button><button type="button" class="danger" data-act="remove-project">Remove</button></div>
