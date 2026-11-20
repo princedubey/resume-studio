@@ -55,7 +55,17 @@ const VAR_RANGES: Record<string, { min: number; max: number; step: number }> = {
   colGap: { min: 10, max: 28, step: 1 },
 };
 
-export default function PrinceEditor({ templateId = "prince" }: { templateId?: string }) {
+export type PrinceEditorProps = {
+  templateId?: string;
+  defaultContent?: string;
+  panelSubtitle?: string;
+};
+
+export default function PrinceEditor({
+  templateId = "prince",
+  defaultContent = PRINCE_DEFAULT_CONTENT,
+  panelSubtitle = "Each resume keeps its own content and designer settings (fonts, gaps, layout).",
+}: PrinceEditorProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const apiRef = useRef<PrinceEngineApi | null>(null);
   const libraryRef = useRef<ResumeLibrary | null>(null);
@@ -98,16 +108,16 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
     setVars(nextVars);
     api.setEditMode(resume.draft.editMode ?? true);
     setEditMode(resume.draft.editMode ?? true);
-    api.applyHtml(resume.draft.html || PRINCE_DEFAULT_CONTENT);
+    api.applyHtml(resume.draft.html || defaultContent);
     setResumeName(resume.name);
     setHistory(resume.history || []);
-  }, []);
+  }, [defaultContent]);
 
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
 
-    const lib = loadLibrary(templateId, PRINCE_DEFAULT_CONTENT);
+    const lib = loadLibrary(templateId, defaultContent);
     libraryRef.current = lib;
     setLibrary(lib);
 
@@ -119,10 +129,10 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
     setResumeName(resume.name);
 
     const api = mountPrinceEditor(root, {
-      defaultHtml: PRINCE_DEFAULT_CONTENT,
+      defaultHtml: defaultContent,
       initial: resume.draft.html
         ? resume.draft
-        : { html: PRINCE_DEFAULT_CONTENT, vars: initialVars, editMode: true, savedAt: Date.now() },
+        : { html: defaultContent, vars: initialVars, editMode: true, savedAt: Date.now() },
       onStatus: setStatus,
       onChange: (state) => {
         persistState(state);
@@ -137,7 +147,7 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
       api.destroy();
       apiRef.current = null;
     };
-  }, [templateId, persistState]);
+  }, [templateId, defaultContent, persistState]);
 
   const snapshot = useCallback(
     (label?: string) => {
@@ -207,7 +217,7 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
       templateId,
       flushed,
       name,
-      PRINCE_DEFAULT_CONTENT,
+      defaultContent,
       DEFAULT_VARS
     );
     libraryRef.current = next;
@@ -255,9 +265,7 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
           <Link href="/">← Templates</Link>
         </p>
         <h1>Resume Designer</h1>
-        <p className="sub">
-          Each resume keeps its own content and designer settings (fonts, gaps, layout).
-        </p>
+        <p className="sub">{panelSubtitle}</p>
 
         <h2>This resume</h2>
         <div className="resume-picker">
@@ -414,7 +422,7 @@ export default function PrinceEditor({ templateId = "prince" }: { templateId?: s
               )
                 return;
               snapshot("Before reset");
-              apiRef.current?.resetContent(PRINCE_DEFAULT_CONTENT);
+              apiRef.current?.resetContent(defaultContent);
               setVars({ ...DEFAULT_VARS });
               setEditMode(true);
             }}

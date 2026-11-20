@@ -22,3 +22,4 @@ export const princeTemplate: TemplateModule = {
 
 export { PRINCE_DEFAULT_CONTENT } from "./defaultContent";
 export { default as PrinceEditor } from "./PrinceEditor";
+export type { PrinceEditorProps } from "./PrinceEditor";

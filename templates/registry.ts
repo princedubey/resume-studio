@@ -50,6 +50,14 @@ export const TEMPLATE_CATALOG: TemplateMeta[] = [
     previewAccent: "#0b3d5c",
   },
   {
+    id: "jd-genai-fde",
+    name: "JD — GenAI FDE (Two Column)",
+    description:
+      "Two-column layout for Senior AI Engineer (FDE): GenAI agents, RAG, Bedrock/AWS, React/Python — customer-facing delivery.",
+    status: "ready",
+    previewAccent: "#b45309",
+  },
+  {
     id: "classic-serif",
     name: "Classic Serif",
     description: "Single-column editorial layout — coming soon.",

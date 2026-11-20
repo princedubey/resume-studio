@@ -11,6 +11,7 @@ Local-first multi-template resume editor built with Next.js. Edit on real A4 pag
 | `ats-twopage` | ATS Detailed 2-Page Senior SWE | Ready |
 | `jd-ai-security` | JD — AI Engineer Security | Ready |
 | `jd-fullstack-aws` | JD — Full-Stack AWS Microservices | Ready |
+| `jd-genai-fde` | JD — GenAI FDE (Two Column) | Ready |
 | `classic-serif` | Classic Serif | Coming soon |
 
 ### Add another template
